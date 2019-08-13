@@ -11,8 +11,8 @@ while selection != "Chosen":
     
     if greeting.lower() == "y":
         print("Excellent!\n")
-        check = "false"
-        while check == "false":
+        check = "false" #Check is a variable that will be used to determine if the user's input is correct
+        while check == "false": #This while loop will make sure to continue to prompt the user for the dice type until they provide a valid input
             dice = input("Please select the kind of dice you would like me to roll for you:\nType '4' for D4\nType '6' for D6\nType '8' for D8\nType '10' for D10\nType '12' for D12\nType '20' for D20\n")
             given_value = int(dice)
             if given_value == 4:
