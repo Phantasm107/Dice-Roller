@@ -1,0 +1,30 @@
+selection = "Un-chosen"
+first_run = 1
+
+while selection != "Chosen":
+
+    if first_run == 1:
+        greeting = input("Hello, would you like me to roll some dice for you?\nType 'Y' for yes, 'N' for no.\n")
+        first_run = 2
+    else:
+        greeting = input("Would you like me to roll any more dice for you?\nType 'Y' for yes, 'N' for no.\n")
+    
+    if greeting.lower() == "y":
+        print("Excellent!\n")
+        dice = input("Please select the kind of dice you would like me to roll for you:\nType '4' for D4\nType '6' for D6\nType '8' for D8\nType '10' for D10\nType '12' for D12\nType '20' for D20\n")
+        number_of_rolls = input("How many dice would you like me to roll?\n")        
+        print("Here is your roll result:")
+        
+        import random
+        for x in range(int(number_of_rolls)):
+            
+            print(random.randint(1,int(dice)))
+               
+    elif greeting.lower() == "n":
+        print("Good Bye.")
+        selection = "Chosen"
+        
+    else:
+        greeting = input("Error -- Please type 'Y' for Yes or 'N' for No.\n")
+
+        
